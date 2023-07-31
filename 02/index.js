@@ -1,0 +1,70 @@
+const carro = {
+    ligado: false,
+    velocidade: 0,
+  
+    ligar: function () {
+      if (this.ligado) {
+        console.log("Este carro já está ligado.");
+      } else {
+        this.ligado = true;
+        console.log("Carro ligado. Velocidade: " + this.velocidade + ".");
+      }
+    },
+  
+    desligar: function () {
+      if (!this.ligado) {
+        console.log("Este carro já está desligado.");
+      } else {
+        this.ligado = false;
+        this.velocidade = 0;
+        console.log("Carro desligado. Velocidade: " + this.velocidade + ".");
+      }
+    },
+  
+    acelerar: function () {
+      if (!this.ligado) {
+        console.log("Não é possível acelerar um carro desligado.");
+      } else {
+        this.velocidade += 10;
+        console.log("Carro ligado. Velocidade: " + this.velocidade + ".");
+      }
+    },
+  
+    desacelerar: function () {
+      if (!this.ligado) {
+        console.log("Não é possível desacelerar um carro desligado.");
+      } else {
+        this.velocidade -= 10;
+        console.log("Carro ligado. Velocidade: " + this.velocidade + ".");
+      }
+    }
+  };
+  
+
+  console.log("Desligar o carro:");
+  carro.desligar();
+  
+  console.log("\nLigar o carro:");
+  carro.ligar();
+  
+  console.log("\nLigar o carro novamente:");
+  carro.ligar();
+  
+  console.log("\nAcelerar o carro:");
+  carro.acelerar();
+  
+  console.log("\nAcelerar o carro novamente:");
+  carro.acelerar();
+  
+  console.log("\nDesacelerar o carro:");
+  carro.desacelerar();
+  
+  console.log("\nDesligar o carro novamente:");
+  carro.desligar();
+  
+  console.log("\nAcelerar o carro novamente:");
+  carro.acelerar();
+  
+  console.log("\nDesacelerar o carro novamente:");
+  carro.desacelerar();
+  
